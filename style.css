@@ -1,12 +1,11 @@
-body {
+/* body {
     font: Arial, Helvetica, sans-serif;
     margin: 20px;
-}
+} */
 
-#bag-contaier {
-    margin-top: 20px;
-    border: 2px, solid, black;
-    height: 70px;
-    width: 70px;
+#bag {
+    border: 1px, solid, black;
+    width: 50px;
+    height: 100px;
+    margin: 10px;
 }
-

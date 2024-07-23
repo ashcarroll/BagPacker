@@ -6,7 +6,7 @@ function intialise() {
 }
 
 function addBag() {
-    let bagContainer = document.getElementById('bag-container');
-    let bag = document.createElement('div');
-    bag.className = 'bag';
+    let newBag = document.createElement('div');
+    newBag.id = 'bag'
+    document.getElementById('bag-container').appendChild(newBag);
 }
