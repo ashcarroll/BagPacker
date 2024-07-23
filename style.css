@@ -1,0 +1,12 @@
+body {
+    font: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+#bag-contaier {
+    margin-top: 20px;
+    border: 2px, solid, black;
+    height: 70px;
+    width: 70px;
+}
+
