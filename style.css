@@ -1,11 +1,24 @@
-/* body {
+body {
     font: Arial, Helvetica, sans-serif;
     margin: 20px;
-} */
+    background-color: grey;
+}
+
+#bag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 #bag {
+    background-color: white;
     border: 1px, solid, black;
-    width: 50px;
-    height: 100px;
+    width: 500px;
+    height: 50px;
     margin: 10px;
+}
+
+#bag-name {
+    width: 50%;
+    padding: 10px;
 }
