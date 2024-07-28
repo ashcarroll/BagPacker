@@ -18,16 +18,23 @@ function addBag() {
     let newBag = document.createElement('div');
     newBag.id = 'bag'
 
-    let name = document.createElement('h3');
-    let bagName = document.getElementById('bagName').innerHTML;
-    name.innerHTML = bagName;
-
+    let bagName = nameBag();
     let bagContents = addItem(); 
 
-    newBag.appendChild(name);
+    newBag.appendChild(bagName);
     newBag.appendChild(bagContents);
+    // document.getElementById('bag-name').innerHTML = document.getElementById('bagName').innerHTML;
 
     bagContainer.appendChild(newBag);
+}
+
+function nameBag() {
+    let name = document.createElement('p');
+    // name.innerText = document.getElementById('bagName').innerHTML;
+    // name.textContent = bagName;
+    name.id = 'bag-name';
+
+    return name;
 }
 
 
