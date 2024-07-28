@@ -19,9 +19,11 @@ function addBag() {
     newBag.id = 'bag'
 
     let bagName = nameBag();
-    let bagContents = addItem(); 
+    let itemList = document.createElement('ul');
+    let bagContents = addItem(itemList);
 
     newBag.appendChild(bagName);
+    newBag.appendChild(itemList);
     newBag.appendChild(bagContents);
     // document.getElementById('bag-name').innerHTML = document.getElementById('bagName').innerHTML;
 
@@ -30,7 +32,7 @@ function addBag() {
 
 function nameBag() {
     let name = document.createElement('p');
-    // name.innerText = document.getElementById('bagName').innerHTML;
+    name.innerText = document.getElementById('bagName').value;
     // name.textContent = bagName;
     name.id = 'bag-name';
 
@@ -38,8 +40,7 @@ function nameBag() {
 }
 
 
-
-function addItem() {
+function addItem(itemList) {
     let bagContents = document.createElement('div');
 
     let itemName = document.createElement('input');
@@ -60,5 +61,23 @@ function addItem() {
     bagContents.appendChild(itemQuantity);
     bagContents.appendChild(itemBtn);
 
+    itemBtn.addEventListener('click', () => showItem(itemName, itemQuantity, itemList));
+
     return bagContents;
+}
+
+function showItem(itemName, itemQuantity, itemList) {
+    
+    if (itemName && itemQuantity) {
+        let item = document.createElement('li');
+        let itemLabel = document.createElement('span');
+        itemLabel.textContent = itemName.value.toString() + itemQuantity.value.toString();
+        console.log('output');
+        console.log(itemName.value);
+        console.log(itemQuantity.value);
+        item.appendChild(itemLabel);
+        itemList.appendChild(item);
+        itemName.value = '';
+        itemQuantity.value = '';
+    }
 }
