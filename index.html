@@ -7,8 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bags">Closed Bags</a></li>
+        </ul>
+    </nav>
     <h1>BagPacker</h1>
-    <button type="button" id="add-bag-btn">Add Bag</button>
+    <div id="homePage">
+        <h2>Home Page</h2>
+        <button type="button" id="create-bag-btn">Create Bag</button>
+        <ul id="bagList" class="bag-list"></ul>
+    </div>
+    <div id="newBagPage" style="display: none;">
+        <h2>New Bag</h2>
+        <input type="text" id="bagName" placeholder="Enter Bag Name">
+        <button type="button" id="add-bag-btn">Add Bag</button>
+    </div>
+
+
+
+
+
     <div id="bag-container"></div>
 
     <script src="script.js"></script>

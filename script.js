@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', intialise);
 
 function intialise() {
+    let createBagBtn = document.getElementById('create-bag-btn');
+    createBagBtn.addEventListener('click', showNewBagForm);
     let addBagBtn = document.getElementById('add-bag-btn');
-    addBagBtn.addEventListener('click', addBag);
+    addBagBtn.addEventListener('click', showNewBagForm);
 }
+
+function showNewBagForm() {
+    document.getElementById("homePage").style.display = "none";
+    document.getElementById("newBagPage").style.display = "block";
+}
+
 
 function addBag() {
     let bagContainer = document.getElementById('bag-container');
