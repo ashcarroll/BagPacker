@@ -18,22 +18,19 @@ function addBag() {
     let newBag = document.createElement('div');
     newBag.id = 'bag'
 
-    let bagName = nameBag();
+    let name = document.createElement('h3');
+    let bagName = document.getElementById('bagName').innerHTML;
+    name.innerHTML = bagName;
+
     let bagContents = addItem(); 
 
-    newBag.appendChild(bagName);
+    newBag.appendChild(name);
     newBag.appendChild(bagContents);
 
     bagContainer.appendChild(newBag);
 }
 
-function nameBag() {
-    let bagName = document.createElement('input');
-    bagName.type = 'text';
-    bagName.placeholder = 'Name your bag';
-    bagName.id = 'bag-name'
-    return bagName;
-}
+
 
 function addItem() {
     let bagContents = document.createElement('input');
