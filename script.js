@@ -4,7 +4,7 @@ function intialise() {
     let createBagBtn = document.getElementById('create-bag-btn');
     createBagBtn.addEventListener('click', showNewBagForm);
     let addBagBtn = document.getElementById('add-bag-btn');
-    addBagBtn.addEventListener('click', showNewBagForm);
+    addBagBtn.addEventListener('click', addBag);
 }
 
 function showNewBagForm() {
