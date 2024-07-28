@@ -40,9 +40,25 @@ function nameBag() {
 
 
 function addItem() {
-    let bagContents = document.createElement('input');
-    bagContents.type = 'text';
-    bagContents.placeholder = 'Add new item'
-    bagContents.id = 'bag-contents'
+    let bagContents = document.createElement('div');
+
+    let itemName = document.createElement('input');
+    itemName.type = 'text';
+    itemName.placeholder = 'Add new item'
+    itemName.id = 'item-name'
+
+    let itemQuantity = document.createElement('input');
+    itemQuantity.type = 'number';
+    itemQuantity.placeholder = 'Qty';
+    itemQuantity.id = 'item-quantity';
+
+    let itemBtn = document.createElement('button');
+    itemBtn.type = 'button';
+    itemBtn.textContent = '+ Add Item';
+
+    bagContents.appendChild(itemName);
+    bagContents.appendChild(itemQuantity);
+    bagContents.appendChild(itemBtn);
+
     return bagContents;
 }
