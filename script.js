@@ -70,8 +70,10 @@ function addItem(itemList) {
 }
 
 function showItem(itemName, itemQuantity, itemList) {
-    
-    if (itemName && itemQuantity) {
+    if (itemName.value == "" || itemQuantity.value == "") {
+        window.alert("Add an item and quantity");
+    }
+    else if (itemName && itemQuantity) {
         let item = document.createElement('li');
         let itemLabel = document.createElement('span');
         itemLabel.textContent = itemName.value.toString() + "   (x" +  itemQuantity.value.toString() + ")";
@@ -88,8 +90,4 @@ function showItem(itemName, itemQuantity, itemList) {
         packedBtn.addEventListener('click', () => item.classList.toggle('packed-item'));
 
     } 
-    
-    else if (itemName == "" || itemQuantity == "") {
-        window.alert("Add an item and quantity"); 
-        }
     }
