@@ -31,6 +31,7 @@ function addBag() {
         newBag.appendChild(bagContents);
         
         bagContainer.appendChild(newBag);
+        document.getElementById('bagName').value = "" ;
     }
 }
 
