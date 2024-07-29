@@ -77,15 +77,12 @@ function showItem(itemName, itemQuantity, itemList) {
         packedBtn.type = 'button';
         packedBtn.textContent = 'Item Packed';
         
-        
         item.appendChild(itemLabel);
-        item.appendChild(packedBtn);
         itemList.appendChild(item);
+        item.appendChild(packedBtn);
         itemName.value = '';
         itemQuantity.value = '';
 
-        packedBtn.addEventListener('change', () => {
-            item.classList.toggle('packed-item')
-        } );
+        packedBtn.addEventListener('click', () => item.classList.toggle('packed-item'));
     }
 }
