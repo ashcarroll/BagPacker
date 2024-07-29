@@ -8,12 +8,11 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#bags">Closed Bags</a></li>
-        </ul>
+        <button type="button" id="home">Home</button>
+        <button type="button" id="form">Feedback form</button>
     </nav>
     <h1>BagPacker</h1>
+    <section id="homeSection">
     <div id="homePage">
         <h2>Home Page</h2>
         <button type="button" id="create-bag-btn">Create Bag</button>
@@ -24,12 +23,19 @@
         <input type="text" id="bagName" placeholder="Enter Bag Name">
         <button type="button" id="add-bag-btn">Add Bag</button>
     </div>
-
-
-
-
-
     <div id="bag-container"></div>
+    </section>
+    <section id="formSection">
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+            <label for="feedback">Feedback:</label>
+            <input type="text" id="feedback" required><br>
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+    </section>
 
     <script src="script.js"></script>
 </body>

@@ -1,11 +1,46 @@
 document.addEventListener('DOMContentLoaded', intialise);
+const form = document.getElementById('feedbackForm');
+
+form.addEventListener('submit', validateForm);
+
+function validateForm() {
+    resultDiv.innerHTML = '';
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+
+    if (!name || !email || !feedback) {
+        resultDiv.innerHTML = '<p class="error">All fields are required.</p>';
+    } 
+    else if (feedback.length < 1) {
+        resultDiv.innerHTML = '<p class="error">Feedback must be at least 2 characters long.</p>';
+    } 
+}
 
 function intialise() {
     let createBagBtn = document.getElementById('create-bag-btn');
     createBagBtn.addEventListener('click', showNewBagForm);
     let addBagBtn = document.getElementById('add-bag-btn');
     addBagBtn.addEventListener('click', addBag);
+    let home = document.getElementById('home');
+    home.addEventListener('click', switchSectionHome);
+    let feedback = document.getElementById('form');
+    feedback.addEventListener('click', switchSectionForm);
 }
+
+function switchSectionHome() {
+    document.getElementById('formSection').style.display = "none";
+    document.getElementById('homeSection').style.display = "block";
+}
+
+function switchSectionForm() {
+    if (window.confirm('Navigating to this form can wipe your bags - is that ok?')) {
+        document.getElementById('homeSection').style.display = "none";
+        document.getElementById('formSection').style.display = "block";
+    }
+}
+
 
 function showNewBagForm() {
     document.getElementById("homePage").style.display = "none";
