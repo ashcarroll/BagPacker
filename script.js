@@ -73,6 +73,9 @@ function showItem(itemName, itemQuantity, itemList) {
     if (itemName.value == "" || itemQuantity.value == "") {
         window.alert("Add an item and quantity");
     }
+    else if (itemQuantity.value <=0){
+        window.alert("You can't have negative items");
+    }
     else if (itemName && itemQuantity) {
         let item = document.createElement('li');
         let itemLabel = document.createElement('span');
