@@ -14,7 +14,7 @@ function showNewBagForm() {
 
 
 function addBag() {
-    if(document.getElementById('bagName').innerHTML == "") {
+    if(document.getElementById('bagName').value == "") {
         window.alert("Bag name is empty!");
     } 
     else {
