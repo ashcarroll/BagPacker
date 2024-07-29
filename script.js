@@ -25,15 +25,13 @@ function addBag() {
     newBag.appendChild(bagName);
     newBag.appendChild(itemList);
     newBag.appendChild(bagContents);
-    // document.getElementById('bag-name').innerHTML = document.getElementById('bagName').innerHTML;
-
+    
     bagContainer.appendChild(newBag);
 }
 
 function nameBag() {
-    let name = document.createElement('p');
+    let name = document.createElement('h3');
     name.innerText = document.getElementById('bagName').value;
-    // name.textContent = bagName;
     name.id = 'bag-name';
 
     return name;

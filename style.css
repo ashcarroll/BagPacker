@@ -8,20 +8,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
 #bag {
     background-color: white;
     border: 1px, solid, black;
-    width: 500px;
-    height: 50px;
-    margin: 10px;
 }
 
-#bag-name {
+/* #bag-name {
     width: 50%;
     padding: 10px;
-}
+} */
 
 .packed-item {
     text-decoration: line-through;
