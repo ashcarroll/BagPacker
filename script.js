@@ -71,13 +71,21 @@ function showItem(itemName, itemQuantity, itemList) {
     if (itemName && itemQuantity) {
         let item = document.createElement('li');
         let itemLabel = document.createElement('span');
-        itemLabel.textContent = itemName.value.toString() + itemQuantity.value.toString();
-        console.log('output');
-        console.log(itemName.value);
-        console.log(itemQuantity.value);
+        itemLabel.textContent = itemName.value.toString() + "   (x" +  itemQuantity.value.toString() + ")";
+        
+        let packedBtn = document.createElement('button');
+        packedBtn.type = 'button';
+        packedBtn.textContent = 'Item Packed';
+        
+        
         item.appendChild(itemLabel);
+        item.appendChild(packedBtn);
         itemList.appendChild(item);
         itemName.value = '';
         itemQuantity.value = '';
+
+        packedBtn.addEventListener('change', () => {
+            item.classList.toggle('packed-item')
+        } );
     }
 }

@@ -22,3 +22,7 @@ body {
     width: 50%;
     padding: 10px;
 }
+
+.packed-item {
+    text-decoration: line-through;
+}
