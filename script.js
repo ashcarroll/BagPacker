@@ -14,19 +14,24 @@ function showNewBagForm() {
 
 
 function addBag() {
-    let bagContainer = document.getElementById('bag-container');
-    let newBag = document.createElement('div');
-    newBag.id = 'bag'
+    if(document.getElementById('bagName').innerHTML == "") {
+        window.alert("Bag name is empty!");
+    } 
+    else {
+        let bagContainer = document.getElementById('bag-container');
+        let newBag = document.createElement('div');
+        newBag.id = 'bag'
 
-    let bagName = nameBag();
-    let itemList = document.createElement('ul');
-    let bagContents = addItem(itemList);
+        let bagName = nameBag();
+        let itemList = document.createElement('ul');
+        let bagContents = addItem(itemList);
 
-    newBag.appendChild(bagName);
-    newBag.appendChild(itemList);
-    newBag.appendChild(bagContents);
-    
-    bagContainer.appendChild(newBag);
+        newBag.appendChild(bagName);
+        newBag.appendChild(itemList);
+        newBag.appendChild(bagContents);
+        
+        bagContainer.appendChild(newBag);
+    }
 }
 
 function nameBag() {
@@ -70,7 +75,6 @@ function showItem(itemName, itemQuantity, itemList) {
         let item = document.createElement('li');
         let itemLabel = document.createElement('span');
         itemLabel.textContent = itemName.value.toString() + "   (x" +  itemQuantity.value.toString() + ")";
-        
         let packedBtn = document.createElement('button');
         packedBtn.type = 'button';
         packedBtn.textContent = 'Item Packed';
@@ -82,5 +86,10 @@ function showItem(itemName, itemQuantity, itemList) {
         itemQuantity.value = '';
 
         packedBtn.addEventListener('click', () => item.classList.toggle('packed-item'));
+
+    } 
+    
+    else if (itemName == "" || itemQuantity == "") {
+        window.alert("Add an item and quantity"); 
+        }
     }
-}
