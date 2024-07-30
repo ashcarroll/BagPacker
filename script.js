@@ -69,6 +69,8 @@ function addBag() {
         
         bagContainer.appendChild(newBag);
         document.getElementById('bagName').value = "" ;
+        document.getElementById('open-bag').style.display = 'block';
+        document.getElementById('closed-bag').style.display = 'none';
     }
 }
 
@@ -134,6 +136,7 @@ function showItem(itemName, itemQuantity, itemList) {
 
     } 
 }
+
 
 
 

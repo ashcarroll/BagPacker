@@ -179,7 +179,7 @@ ul {
     background: #FFF;
     color: #616161;
     font-size: 18px;
-    font-weight: 700;
+    /* font-weight: 700; */
     line-height: 1.2px; 
     padding-left: 12px;
 }
@@ -207,3 +207,82 @@ ul {
     padding-left: 12px;
 }
 
+#open-bag {
+    display: none;
+}
+
+#open-bag, #closed-bag {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-top: 40px;
+    height: 200px;
+    width: auto;
+}
+
+@media (max-width: 600px){
+
+h1 {
+    color: #616161;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2px;
+    margin-top: 80px;
+}
+
+h2 {
+    color: #5DAFAF;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3px;
+    margin-top: 60px;
+}
+
+h3 {
+    color: #616161;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4px;
+}
+
+#name, #email, #feedback {
+    width: 370px;
+    height: 44px;
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1px solid #616161;
+    background: #FFF;
+    color: #616161;
+    font-size: 18px;
+    line-height: 1.2px; 
+    padding-left: 12px;
+}
+
+#feedbackForm button {
+    margin-left: 20px;
+    margin-top: 40px;
+    width: 166px;
+    height: 44px;
+    border-radius: 5px;
+    border: none;
+    background-color: #F28A72;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2px;
+}
+
+#feedbackForm label {
+    color: #616161;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2px; 
+    padding-left: 12px;
+}
+
+
+}
