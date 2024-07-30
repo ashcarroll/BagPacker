@@ -21,10 +21,13 @@ function validateForm() {
 function intialise() {
     let createBagBtn = document.getElementById('create-bag-btn');
     createBagBtn.addEventListener('click', showNewBagForm);
+
     let addBagBtn = document.getElementById('add-bag-btn');
     addBagBtn.addEventListener('click', addBag);
+
     let home = document.getElementById('home');
     home.addEventListener('click', switchSectionHome);
+
     let feedback = document.getElementById('form');
     feedback.addEventListener('click', switchSectionForm);
 }
@@ -40,7 +43,6 @@ function switchSectionForm() {
         document.getElementById('formSection').style.display = "block";
     }
 }
-
 
 function showNewBagForm() {
     document.getElementById("homePage").style.display = "none";
@@ -129,4 +131,9 @@ function showItem(itemName, itemQuantity, itemList) {
         packedBtn.addEventListener('click', () => item.classList.toggle('packed-item'));
 
     } 
-    }
+}
+
+
+
+
+
