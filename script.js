@@ -122,6 +122,7 @@ function showItem(itemName, itemQuantity, itemList) {
         let packedBtn = document.createElement('button');
         packedBtn.type = 'button';
         packedBtn.textContent = 'Item Packed';
+        packedBtn.id = 'item-packed-btn';
         
         item.appendChild(itemLabel);
         itemList.appendChild(item);
