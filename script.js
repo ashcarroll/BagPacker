@@ -97,6 +97,7 @@ function addItem(itemList) {
     let itemBtn = document.createElement('button');
     itemBtn.type = 'button';
     itemBtn.textContent = '+ Add Item';
+    itemBtn.id = 'item-btn';
 
     bagContents.appendChild(itemName);
     bagContents.appendChild(itemQuantity);
