@@ -23,4 +23,4 @@
 
 #### Instructions:
 
-Click the GitHub pages link to access the site: (https://ashcarroll.github.io/BagPacker/) 
+Click the GitHub pages link to access the site: https://ashcarroll.github.io/BagPacker/ 
