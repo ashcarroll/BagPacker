@@ -8,7 +8,7 @@
 
 <p>They can then mark items as packed when they have physically put them in their bag.</P>
 
-
+<br>
 #### Features:
 
 <ul>
@@ -20,7 +20,7 @@
 <li>Responsive graphic to show when you are packing bags or have no bags to pack</li>
 </ul>
 
-
+<br>
 #### Instructions:
 
 Click the GitHub pages link to access the site: https://ashcarroll.github.io/BagPacker/ 
