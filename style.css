@@ -67,10 +67,11 @@ h3 {
 }
 
 #bagName {    
-    width: 370px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 44px;
     margin-top: 40px;
-    margin-left: 25%;
     border-radius: 5px;
     border: 1px solid #616161;
     background: #FFF;
@@ -82,8 +83,10 @@ h3 {
 }
 
 #add-bag-btn {
-    margin-left: 20px;
-    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; 
     width: 166px;
     height: 44px;
     border-radius: 5px;
@@ -167,6 +170,7 @@ ul {
 .packed-item {
     text-decoration: line-through;
 }
+
 
 #name, #email, #feedback {
     width: 370px;
@@ -260,9 +264,14 @@ h3 {
 }
 
 #name, #email, #feedback {
-    width: 370px;
-    height: 44px;
-    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    width: 200px;
+    margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #616161;
     background: #FFF;
@@ -273,26 +282,43 @@ h3 {
 }
 
 #feedbackForm button {
-    margin-left: 20px;
-    margin-top: 40px;
-    width: 166px;
-    height: 44px;
-    border-radius: 5px;
-    border: none;
-    background-color: #F28A72;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    color: #FFF;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #feedbackForm label {
-    color: #616161;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.2px; 
-    padding-left: 12px;
+    margin-bottom: 16px;
+    margin-top: 10px;
 }
 
+}
+
+@media (max-width: 415px) {
+
+#bag {
+    width: 80%;
+}
+
+#item-quantity, #item-name, #item-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+
+@media (max-width: 800px){
+    #bagName {    
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #add-bag-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    } 
 }
